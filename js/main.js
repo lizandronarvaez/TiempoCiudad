@@ -36,11 +36,15 @@ const datesWeather = () => {
                                             Temperatura Max: ${tempMax}ºC`;
             humidity.textContent = `Humedad: ${_humidity}%`;
             // 
-            setInterval(()=>{
+            setInterval(() => {
                 const dateTime = new Date()
-            hour.innerHTML=dateTime.toLocaleTimeString()
-            },1000)
+                hour.innerHTML = dateTime.toLocaleTimeString()
+            }, 1000)
         })
 }
 // CALLBACK AL EVENTO Y EJECUCION
 search_city.addEventListener('click', datesWeather)
+city.addEventListener('keydown', (event) => {
+    var keycode = event.key
+    if (keycode == 'Enter') datesWeather()
+})
