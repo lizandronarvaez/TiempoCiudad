@@ -16,7 +16,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: blur(20px);
-    height: 125vh;
+    height: 130vh;
     width: auto;
 }
 
@@ -75,6 +75,7 @@ body {
 }
 
 .main__tiempo #buscar {
+    min-width: 100px;
     margin-top: 1.5%;
     width: 7vw;
     height: 5vh;
@@ -113,6 +114,7 @@ img {
 }
 
 blockquote {
+    min-width: 250px;
     width: 25%;
     font-size: 2em;
     color: var(--colorText);
@@ -132,7 +134,7 @@ blockquote {
         width: 90%;
         font-size: 1.2em;
         height: 0%;
-        margin-bottom: 15%;
+        margin-bottom: 20%;
     }
 
     .main__tiempo {
@@ -141,10 +143,10 @@ blockquote {
     }
 
     .main__tiempo [type="text"] {
-        width: 60%;
-        height: 60%;
+        width: 50%;
+        height: 30px;
         font-size: 0.6em;
-        margin-top: 6%;
+        /* margin-top: 6%; */
     }
 
     .main__tiempo #buscar {
@@ -158,7 +160,7 @@ blockquote {
 
     .main__tiempo [type='text']:focus {
         outline: none;
-        height: 60%;
+        height: 30px;
     }
 
     .tiempo {
