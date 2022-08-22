@@ -21,17 +21,13 @@ body {
 }
 
 .nav__tiempo {
-    width: 40vw;
+    width: auto;
     height: 12vh;
     margin: 0 auto;
     color: var(--colorText);
     text-align: center;
     padding: 15px;
     font-size: 1.3em;
-}
-
-.nav__tiempo p {
-    font-size: 1.8em;
 }
 
 .main__tiempo {
@@ -56,10 +52,6 @@ body {
 
 }
 
-.main__tiempo p {
-    margin-bottom: 2%;
-}
-
 .main__tiempo [type="text"] {
     margin-top: 3%;
     margin-left: 5%;
@@ -76,9 +68,13 @@ body {
 
 .main__tiempo #buscar {
     min-width: 100px;
-    margin-top: 1.5%;
+    margin-top: 3%;
     width: 7vw;
-    height: 5vh;
+    height: 5.2vh;
+    font-size: 0.em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tiempo {
@@ -115,28 +111,30 @@ img {
 
 blockquote {
     min-width: 250px;
-    width: 25%;
+    width: auto;
     font-size: 2em;
     color: var(--colorText);
     position: relative;
-    margin-left: 37%;
+    text-transform: capitalize;
+    padding-left: 35%;
 }
 
 /* Media Queries  Dispositivos Moviles*/
 @media (max-width:420px) {
     body {
         background-size: cover;
-        background-position: 0%;
+        background-position: 50%;
         width: auto;
     }
 
     .nav__tiempo {
-        width: 90%;
+        width: 100%;
         font-size: 1.2em;
-        height: 0%;
-        margin-bottom: 20%;
+        padding-top: 3em;
     }
-
+    .nav__tiempo .container-xl h1{
+        font-size: 1.3em;
+    }
     .main__tiempo {
         width: 90%;
         margin-top: 10%;
@@ -150,12 +148,10 @@ blockquote {
     }
 
     .main__tiempo #buscar {
-        background-color: #000;
-        color: var(--colorText1);
-        width: 30%;
-        height: 60%;
+        height: 1.35em;
         font-size: 0.7em;
-        border-radius: 5rem;
+        display: flex;
+        align-items: center;
     }
 
     .main__tiempo [type='text']:focus {
@@ -203,8 +199,8 @@ blockquote {
 
     blockquote {
         position: relative;
-        margin: auto;
-        width: 80%;
+        padding-left: 15%;
+        width:auto;
         font-size: 1.3em;
         font-weight: bold;
     }

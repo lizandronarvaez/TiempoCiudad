@@ -14,7 +14,7 @@ const icon = 'http://openweathermap.org/img/wn/'
 
 // FUNCION PARA RELIZAR LA LLAMADA A FECHT
 const datesWeather = () => {
-    const weather = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&lang=es`;
+    const weather = `https://api.openweathermap.org/data/2.5/weather?q=${city.value},es&appid=${apiKey}&lang=es`;
     if (!city.value) alert('Introduce una ciudad');
     // PETICION FETCH
     fetch(weather)
@@ -29,6 +29,7 @@ const datesWeather = () => {
             const iconUrl = `${icon}${dates.weather[0].icon}.png`;
             const _description = `<img src='${iconUrl}'/>` + dates.weather[0].description;
             // RENDERIZACIONES AL DOM
+            city.value=""
             description.innerHTML = `${_description}`;
             cities.textContent = `${nameCity}`;
             temperatureAct.textContent = `${tempActual}ºC`;
