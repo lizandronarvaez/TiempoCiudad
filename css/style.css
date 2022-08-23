@@ -1,7 +1,7 @@
 :root {
     --colorText: #000;
     --colorText1: #fff;
-    --secondColor: rgba(10, 10, 10, 0);
+    --secondColor: rgba(10, 20, 30, 0.5);
     --treeColor: rgba(241, 13, 13, 0.726);
 }
 
@@ -12,12 +12,13 @@
 }
 
 body {
-    background-image: url('https://thumbs.dreamstime.com/b/azul-hermoso-del-color-de-fondo-brillante-meteorolog%C3%ADa-pura-138234266.jpg');
+    background-image: url('https://photos.eltiempo.es/7/39/634fffaa14cb40b7a5a2e0a93443d125_720x560.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: blur(20px);
-    height: 130vh;
+    backdrop-filter: blur(5px);
+    height: 140vh;
     width: auto;
+    padding: 10px;
 }
 
 .nav__tiempo {
@@ -37,7 +38,6 @@ body {
     text-align: center;
     font-size: 2em;
     padding-bottom: 2%;
-    background-color: var(--secondColor);
 }
 
 .main__tiempo::after {
@@ -68,41 +68,44 @@ body {
 
 .main__tiempo #buscar {
     min-width: 100px;
-    margin-top: 3%;
+    margin-top: 2.9%;
     width: 7vw;
-    height: 5.2vh;
-    font-size: 0.em;
+    height: 5.1vh;
+    font-size: 0.7em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .tiempo {
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
-    transform: translate(-150px, -7px);
+    transform: translate(-190px, -7px);
 }
 
 #descripcion {
-    display: inline-flex;
-    padding-top: 5%;
-    width: 20rem;
-    font-size: 1.1em;
-    text-transform: uppercase;
+    display: inline-block;
+    font-size: 1.5em;
+    text-transform: capitalize;
 }
 
 #ciudades {
     font-size: 2em;
-    transform: translate(120px, -95px);
+    transform: translate(130px, -120px);
 }
 
 #hora {
     transform: translateY(-50px);
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 #temperaturas {
     margin-right: 10px;
+    font-weight: 300;
+}
+
+#humedad {
+    font-weight: 300;
 }
 
 img {
@@ -117,14 +120,17 @@ blockquote {
     position: relative;
     text-transform: capitalize;
     padding-left: 35%;
+    font-weight: bolder;
 }
 
 /* Media Queries  Dispositivos Moviles*/
 @media (max-width:420px) {
     body {
         background-size: cover;
-        background-position: 50%;
+        background-position: 1%;
         width: auto;
+        backdrop-filter: blur(15px);
+        height: 108vh;
     }
 
     .nav__tiempo {
@@ -132,9 +138,11 @@ blockquote {
         font-size: 1.2em;
         padding-top: 3em;
     }
-    .nav__tiempo .container-xl h1{
+
+    .nav__tiempo .container-xl h1 {
         font-size: 1.3em;
     }
+
     .main__tiempo {
         width: 90%;
         margin-top: 10%;
@@ -164,10 +172,6 @@ blockquote {
         padding-top: 0%;
     }
 
-    .main__tiempo p {
-        margin-bottom: 5%;
-    }
-
     #descripcion {
         display: inline-flex;
         width: 70%;
@@ -183,13 +187,24 @@ blockquote {
     }
 
     #temperaturas {
-        font-size: 1em;
-        transform: translateX(10px);
+        font-size: 0.7em;
+        font-weight: 300;
+        transform: translate(10px, -40px);
+    }
+
+    #humedad {
+        transform: translateY(-30px);
+        font-size: 0.6em;
+        font-weight: 300;
     }
 
     #ciudades {
         transform: translate(0px, -50px);
-        font-size: 1.5em;
+        font-size: 1em;
+    }
+
+    #hora {
+        font-size: 0.7em;
     }
 
     img {
@@ -200,8 +215,9 @@ blockquote {
     blockquote {
         position: relative;
         padding-left: 15%;
-        width:auto;
+        width: auto;
         font-size: 1.3em;
         font-weight: bold;
+        transform: translateY(-40px);
     }
 }
