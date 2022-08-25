@@ -130,7 +130,7 @@ blockquote {
         background-position: 1%;
         width: auto;
         backdrop-filter: blur(15px);
-        height: 120vh;
+        height: 100vh;
     }
 
     .nav__tiempo {
