@@ -23,7 +23,7 @@ body {
 
 .nav__tiempo {
     width: auto;
-    height: 12vh;
+    height: 8vh;
     margin: 0 auto;
     color: var(--colorText);
     text-align: center;
@@ -33,23 +33,14 @@ body {
 
 .main__tiempo {
     width: 40vw;
-    margin: 15px auto;
+    margin: 0 auto;
     color: black;
     text-align: center;
     font-size: 2em;
-    padding-bottom: 2%;
-}
-
-.main__tiempo::after {
-    content: "";
-    background-color: var(--secondColor);
-    width: 40vw;
-    height: 70vh;
-    margin: 20px auto;
-    color: var(--colorText);
-    font-size: 2em;
-    padding-bottom: 1.5%;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main__tiempo [type="text"] {
@@ -84,7 +75,7 @@ body {
 }
 
 #descripcion {
-    display: inline-block;
+    
     font-size: 1.5em;
     text-transform: capitalize;
 }
@@ -95,6 +86,7 @@ body {
 }
 
 #hora {
+    width: 110%;
     transform: translateY(-50px);
     font-size: 1.4em;
 }
@@ -146,13 +138,16 @@ blockquote {
     .main__tiempo {
         width: 90%;
         margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
+    
     .main__tiempo [type="text"] {
         width: 50%;
         height: 30px;
         font-size: 0.6em;
-        /* margin-top: 6%; */
     }
 
     .main__tiempo #buscar {
@@ -218,6 +213,6 @@ blockquote {
         width: auto;
         font-size: 1.3em;
         font-weight: bold;
-        transform: translateY(-40px);
+        transform: translateY(-20px);
     }
 }
